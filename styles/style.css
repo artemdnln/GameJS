@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    background-color: #01ddb8;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+    text-align: center;
+    font-size: 7rem;
+    line-height: 1;
+    margin-bottom: 0px;
+}
+
+button {
+    margin-top: 50px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.score {
+    background: rgba(206, 9, 9, 0.2);
+    padding: 1rem 3rem 1rem;
+    line-height: 1;
+    border-radius: 1rem;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.hole {
+    flex-basis: 33.33%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hole::after {
+    display: block;
+    background: url('../img/dirt.png') bottom center;
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+}
+
+.mole {
+    background: url('../img/mops2.png') bottom center no-repeat;
+    background-size: 60%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s;
+}
+
+.hole.up .mole {
+    top: 0;
+}
